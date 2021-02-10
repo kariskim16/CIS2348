@@ -1,3 +1,8 @@
+"""
+Karis Kim
+CIS 2348
+1624226
+"""
 userNum = int(input())
 userNumSquared = userNum * userNum # Bug here; fix it when instructed
 
