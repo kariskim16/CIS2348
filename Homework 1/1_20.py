@@ -1,3 +1,8 @@
+"""
+Karis Kim
+CIS 2348
+1624226
+"""
 def userinput():
     user_num1 = int(input("Enter Integer: "))
     user_square = user_num1 * user_num1
