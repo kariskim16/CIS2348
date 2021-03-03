@@ -1,10 +1,11 @@
-create_password = input()
-
 """
 Karis Kim
 CIS 2348
 1624226
 """
+create_password = input()
+
+
 new_password = ''
 
 i = 0
