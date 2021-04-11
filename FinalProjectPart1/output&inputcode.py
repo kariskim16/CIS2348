@@ -1,6 +1,8 @@
+'''
 Karis Kim
 1624226
 CIS 2348
+'''
 '''
 create a class: Inventory
 
