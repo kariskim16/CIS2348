@@ -1,17 +1,7 @@
+Karis Kim
+1624226
+CIS 2348
 '''
-A program that manages the inventory of an electronics store.
-
-use of classes, use of dictionaries and input and output of comma delimeted csv files.
-
-Input:
-
-a) ManufacturerList.csv -- contains items listed by row. Each row contains item ID, manufacturer name, item type, and optionally a damaged indicator.
-
-b) PriceList.csv -- contains items listed by row. Each row contains item ID and the item price.
-
-c) ServiceDatesList.csv – contains items listed by row. Each row contains item ID and service date.
-
-
 create a class: Inventory
 
 Instance/object variables:
@@ -21,7 +11,6 @@ Instance/object variables:
     price, float
     service_date, string
     damaged, boolean
-
 '''
 
 
@@ -88,14 +77,7 @@ def main():
     for _id in inven_d:
         print(inven_d[_id].get_info())
 
-    '''
 
-    Required Output:
-    Processed Inventory Reports:
-
-    a. FullInventory.csv -- 
-    all the items listed by row with all their information . The items should be sorted alphabetically by manufacturer. Each row should contain item ID, manufacturer name, item type, price, service date, and list if it is damaged. The item attributes must appear in this order.
-    '''
     print()
     # Create a list from the inventory information
     inven_l = list(inven_d.values())
@@ -111,9 +93,6 @@ def main():
         for obj in inven_l:
             f.write(obj.get_info() + "\n")
 
-    '''
-    b. Item type Inventory list, i.e LaptopInventory.csv -- there should be a file for each item type and the item type needs to be in the file name. Each row of the file should contain item ID, manufacturer name, price, service date, and list if it is damaged. The items should be sorted by their item ID.
-    '''
 
     # delete any old files (end with "Inventory.csv")
     import os
@@ -143,9 +122,7 @@ def main():
             # write a line to the file consisting of [item ID, manufacturer name, price, service date, and list if it is damaged]
             f.write(f"{obj._id},{obj._mfg},{obj._price},{obj._service_date},{obj._damaged}\n")
 
-    '''
-    c. PastServiceDateInventory.csv – all the items that are past the service date on the day the program is actually executed. Each row should contain: item ID, manufacturer name, item type, price, service date, and list if it is damaged. The items must appear in the order of service date from oldest to most recent.
-    '''
+
     from datetime import datetime
 
     # create a date object for today
@@ -165,9 +142,7 @@ def main():
                 f.write(obj.get_info() + "\n")
                 print(obj.get_info())
 
-    '''
-    d. DamagedInventory.csv –all items that are damaged. Each row should contain : item ID, manufacturer name, item type, price, and service date. The items must appear in the order of most expensive to least expensive. 
-    '''
+
     print("CREATING DAMAGED INVENTORY REPORT")
     # sort in the order of most expensive to least expensive
     inven_l.sort(key=lambda x: x._price, reverse=True)
