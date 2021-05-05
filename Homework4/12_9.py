@@ -1,3 +1,8 @@
+"""
+Karis Kim
+1624226
+CIS 2348
+"""
 x = input().split()
 person_name = x[0]
 while person_name != '-1':
