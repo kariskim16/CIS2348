@@ -1,3 +1,8 @@
+"""
+Karis Kim
+1624226
+CIS 2348
+"""
 num_calls = 0
 
 # TODO: Write the partitioning algorithm - pick the middle element as the
