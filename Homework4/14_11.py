@@ -1,3 +1,8 @@
+"""
+Karis Kim
+1624226
+CIS 2348
+"""
 def selection_sort_descend_trace(lst):
     for n in range(len(lst) - 1):
         largest_value = n
