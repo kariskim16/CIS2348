@@ -1,3 +1,8 @@
+"""
+Karis Kim
+1624226
+CIS 2348
+"""
 # imports class and functions from previous assignment
 import part1code as p1
 
